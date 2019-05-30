@@ -1,17 +1,563 @@
-.sg-title {
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: #333;
-    margin: 1rem 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+body{
+    font-family: var(--secondaryfont);
+    width: 100vw;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+.container{
+    
+    max-width: 1245px;
+}
+header {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 200;
+}
+/*generalised*/
+.logo{
+    text-decoration: none;
+    font-family: var(--secondaryfont);
+    font-weight: bold;
+    font-size: 2rem; 
+    text-transform: uppercase;
+    border-bottom: 3px var(--primarycolor) solid;
+    width: fit-content;
+}
+.nav{
+    display: block;
+}
+.nav li{
+    font-family: var(--primaryfont);
+    font-size: 1rem;
+    text-transform: uppercase;
+    width: fit-content;
+    list-style: none;
+}
+main{
+    margin-top: 110vh;
+}
+/*header*/
+#homelogo{
+    color: white;
+}
+#homenav li{
+    color: white;
+}
+#homenav li a{
+    text-decoration: none;
+    color: white;
+}
+#homenav li a:active{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px white solid;
+    padding: 3px;
+}
+.picturenav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: var(--sidemargin);
+    margin-right: var(--sidemargin);
+    padding-top: 20px;
+}
+#homenav{
+    display: flex;
+    justify-content: space-between;
+    width: 610px;
+    align-items: center;
 }
 
-.sg-subtitle {
-    font-size: 1rem;
-    border-bottom: solid 1px #aaa;
-    font-weight: 400;
-    color: #666;
-    text-transform: uppercase;
-    margin: 2rem 0 .5rem 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+/*achtergrondfoto*/
+#bgpicture{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/nathan-dumlao-291783-unsplash.jpg");
+    background-size: cover;
+    
+}
+
+/*Welkom op hompage*/
+#homegreetingh1{
+    font-size: 40px;
+    color:white;
+    font-family: var(--secondaryfont);
+}
+#homegreetingh2{
+    font-size: 20px;
+    color:white;
+}
+#homegreetingflex{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 550px;
+    
+}
+#homegreeting{
+    text-align: center;
+    margin-right: var(--sidemargin);
+}
+
+/*homebuttons*/
+#homebuttons{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.primarybutton{
+    height: 35px;
+    width: fit-content;
+    padding: 5px 13px;
+    color: white;
+    background-color: var(--primarycolor);
+    border: 1px solid var(--primarycolor);
+    border-radius: 5px;
+    font-size: 21px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.205);
+}
+.secondarybutton{
+    height: 35px;
+    width: fit-content;
+    padding: 5px;
+    color: var(--primarycolor);
+    background-color: white;
+    border: 1px solid var(--primarycolor);
+    border-radius: 5px;
+    font-size: 21px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.205);
+}
+/*site nav header*/
+#sitenav{
+    display: flex;
+    justify-content: space-between;
+    width: 610px;
+    align-items: flex-end;
+    align-items: center;
+    
+}
+#sitenav{
+    color: var(--secondarycolor);
+}
+.whitenav{
+    
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.205);
+    height: 95px;
+    border-bottom-left-radius: var(--borderradius);
+    border-bottom-right-radius: var(--borderradius);
+    
+}
+
+div.whitenav{
+    position: fixed;
+    width: 100vw;
+    background:#fff;
+    z-index: 10;
+    top: 0;
+}
+div.whitenav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+}
+#sitenav li a{
+    text-decoration: none;
+    color: var(--secondarycolor);
+}
+#sitenav li a:active{
+    font-weight: bold;
+    border-bottom: 1px var(--secondarycolor) solid;
+    padding: 3px;
+}
+#sitelogo{
+    color: var(--secondarycolor);
+}
+
+/*Main intro*/
+
+h1{
+    font-size: 2.5rem;
+    color: var(--primarycolor);
+    font-weight: 650;
+    font-family: var(--primaryfont);
+    margin-bottom: 40px;
+}
+.primtext{
+    font-family: var(--secondaryfont);
+    color: var(--secondarycolor);
+    font-size: 22px;
+    text-align: justify;
+}
+.mainpic{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--borderradius);
+}
+/*extra info*/
+#widepicture{
+    height: 30rem;
+    width: 100%;
+    background-image: url("../img/les-elby-719746-unsplash.jpg");
+    background-size: cover;
+    border-radius: var(--borderradius);
+    position: relative;
+}
+#widepicture .secondarybutton{
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+}
+.sidepic{
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--borderradius);
+    height: auto;
+}
+#border{
+    border: var(--secondarycolor) 1px solid;
+}
+h2{
+    font-size:30px;
+    color: var(--primarycolor);
+    font-weight: 650;
+    font-family: var(--primaryfont);
+    margin-bottom: 40px;
+}
+#line{
+    border-bottom: 2px solid var(--secondarycolor);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+/*icon navigation*/
+#naviconcontainer{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    align-items: baseline;
+    
+}
+.navicon{
+    width: 10rem;
+    height: auto;
+    color: var(--secondarycolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navicon i:hover{
+    color: var(--primarycolor);
+}
+.navicon i:active{
+    color: var(--primarycolor);
+}
+.navicon .primarybutton{
+    margin-top: 1.5rem;
+}
+
+footer{
+    margin-top: 5rem;
+    height: fit-content;
+    width: 100vw;
+    background-color: var(--secondarycolor);
+}
+#footerflex{
+    display:flex;
+    justify-content: space-between;
+    height: 6rem;
+}
+.contactfoot{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.6rem;
+}
+
+.footertext{
+    color: white;
+    margin-bottom: 0.8rem;
+}
+.footertext i{
+    color: var(--primarycolor);
+}
+.iconfoot i{
+    color: white;
+}
+.iconfoot i:hover{
+    color: var(--primarycolor);
+}
+.iconfoot i:active{
+    color: var(--primarycolor);
+}
+
+.iconfoot{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+.newsfoot form{
+    color: white;
+    font-size: 15px;
+    
+}
+.newsfoot{
+    padding-top: 1rem;
+}
+.newsfoot form input{
+    height: 2rem;
+    color: var(--lightgrey);
+    margin-top: 0.5rem;
+    width: 15rem;
+}
+.verklaringlinks{
+    display: flex;
+    justify-content: space-around;
+    width: 25rem;
+    padding-bottom: 10px;
+}
+.verklaringlinks p a{
+    text-decoration: none;
+    color: var(--lightgrey);
+    font-size: 0.8rem;
+    
+}
+.verklaringlinks p a:hover{
+    text-decoration: underline;
+}
+.verklaringlinks p a:visited{
+    text-decoration: underline;
+    color: var(--darkgrey);
+}
+.linkflex{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+
+}
+
+/*transitions*/
+#homenav li a:hover{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px white solid;
+    padding: 3px;
+}
+
+
+#sitenav li a:hover{
+    font-weight: bold;
+    border-bottom: 1px var(--secondarycolor) solid;
+    padding: 3px;
+}
+.primarybutton:hover{
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.205);
+}
+.primarybutton:focus{
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.205);
+    color: white;
+    background-color: var(--secondarycolor);
+}
+.secondarybutton:hover{
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.205);
+}
+.secondarybutton:focus{
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.205);
+    color: var(--secondarycolor);
+    border-color: var(--secondarycolor);
+}
+#hamburgersite{
+    display:none;
+    color: var(--secondarycolor);
+}
+#hamburgerhome{
+    display:none;
+    color: white;
+}
+#iconsmall{
+    display:none;
+}
+@media (max-width: 576px) {
+    .picturenav{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+}
+@media (max-width: 768px) {
+    .picturenav{
+        
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .nav li{
+        width: 0px;
+    }
+    #naviconcontainer{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        align-items: baseline;
+        
+    }
+    footer{
+        display:none;
+    }
+   
+}
+@media (max-width: 992px) {
+    
+    .nav {
+        display: none;
+        visibility: hidden;
+    }
+    #hamburgerhome{
+        display:block;
+    }
+    #hamburgersite{
+        display:block;
+    }
+    .picturenav{
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+    #homegreetingflex{
+        padding-top: 30vh;
+        justify-content: center;
+    }
+    #homegreeting{
+
+        margin-right: 0px;
+    }
+    #widepicture{
+        height: 15rem;
+    }
+    #iconbig{
+        display: none;
+    }
+    #iconsmall{
+        display: block;
+    }
+   
+}
+
+
+
+/*styleguide*/
+
+.colors div{
+    width: 15vw;
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.colors{
+    display: flex;
+}
+
+#primarycolor{
+    background-color: var(--primarycolor);
+}
+#secondarycolor{
+    background-color: var(--secondarycolor);
+}
+#darkgrey{
+    background-color: var(--darkgrey);
+}
+#lightgrey{
+    background-color: var(--lightgrey);
+}
+#white{
+    background-color: white;
+    color: black;
+}
+.fonts{
+    display: flex;
+}
+.fonts div{
+    margin-top: var(--gutter);
+    width: 25vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: var(--secondarycolor);
+    text-align: center;
+}
+#primaryfont p{
+    font-family: var(--primaryfont);
+}
+#secondaryfont p{
+    font-family: var(--secondaryfont);
+}
+.buttons{
+    display:flex;
+
+}
+.buttons div{
+    margin-top: var(--gutter);
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fontsandbuttons{
+    display: flex;
+    width: 100vw;
+    padding-bottom: var(--gutter);
+    border: 2px solid var(--secondarycolor);
+    border-radius: 5px;
+}
+.titlesg{
+    width: 25vw;
+}
+.navigationbars{
+    background-color: black;
+    border: 2px solid var(--secondarycolor);
+
+}
+.navigationbars div.whitenav{
+    position: relative;
+    width: 100vw;
+    background:#fff;
+    z-index: 10;
+    margin-top: 1rem;
+    top: 0;
+}
+.titles{
+    display:flex;
+    justify-content: space-between;
+    padding-right: var(--gutter);
+}
+.forms{
+    background-color: var(--secondarycolor);
+    display:flex;
+    justify-content: space-between;
+    padding-right: var(--gutter);
+}
+.betalingsform form input{
+    width: 376px;
+    border: 1px solid var(--primarycolor);
+    border-radius: 5px;
+    height:41px;
+    font-size: 20px;
+    
+}
+.betalingsform form h2{
+    margin-bottom: 0px;
 }
