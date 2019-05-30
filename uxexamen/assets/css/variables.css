@@ -1,0 +1,13 @@
+:root{
+    --gutter: 25px;
+    --primarycolor: #a6cb5d;
+    --secondarycolor: #3f503e;
+    --darkgrey: #303030;
+    --lightgrey:#747474;
+    --sidemargin: 185px;
+    --primaryfont: "Segoe ui";
+    --secondaryfont: "Nirmala ui";
+    --buttonfont: "Nirmala ui";
+    --borderradius: 5px;
+
+}
